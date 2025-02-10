@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Melhor que margin-top: 50% */
+    padding: 20px; /* Evita que o conteúdo grude nas bordas em telas menores */
+}
+
+.container {
+    width: 90%; /* Ocupa 90% da tela, mas sem quebrar */
+    max-width: 400px; /* Mantém o design ideal */
+    padding: 20px; /* Reduzi o padding para evitar espaços desnecessários */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Mantém a imagem responsiva */
+.qr-code {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.qr-code img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Melhor ajuste para textos */
+.qr-code-text {
+    text-align: center;
+    padding: 15px;
+}
+
+.qr-code-text h1 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 375px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .qr-code-text h1 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 450px;
+    }
+
+    .qr-code-text h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
